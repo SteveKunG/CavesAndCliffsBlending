@@ -1,0 +1,25 @@
+{
+    "schemaVersion": 1,
+    "id": "cncblending",
+    "version": "1.0.0",
+    "name": "Caves&Cliffs Blending",
+    "description": "Fixes chunk blending with 1.17 Caves&Cliffs Datapack world",
+    "authors": [
+        "SteveKunG"
+    ],
+    "icon": "logo.png",
+    "contact": {
+        "homepage": "https://modrinth.com/mod/cncblending",
+        "sources": "https://github.com/SteveKunG/CavesAndCliffsBlending",
+        "issues": "https://github.com/SteveKunG/CavesAndCliffsBlending/issues"
+    },
+    "license": "MIT",
+    "environment": "*",
+    "depends": {
+        "fabricloader": "*",
+        "minecraft": ">=1.18"
+    },
+    "mixins": [
+        "mixins.cncblending.json"
+    ]
+}

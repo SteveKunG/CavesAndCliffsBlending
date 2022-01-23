@@ -1,0 +1,12 @@
+{
+    "required": true,
+    "minVersion": "0.8.4",
+    "package": "com.stevekung.cncblending",
+    "compatibilityLevel": "JAVA_17",
+    "mixins": [
+        "MixinChunkStorage"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
