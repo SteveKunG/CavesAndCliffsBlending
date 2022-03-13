@@ -17,7 +17,7 @@ import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.chunk.storage.ChunkStorage;
 import net.minecraft.world.level.storage.DimensionDataStorage;
 
-@Mixin(ChunkStorage.class)
+@Mixin(value = ChunkStorage.class, priority = 1200)
 public class MixinChunkStorage
 {
     private static final int JE_1_17 = 2724;

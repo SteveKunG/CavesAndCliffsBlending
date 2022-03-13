@@ -3,6 +3,7 @@ package com.stevekung.cncblending;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 
+import net.minecraft.core.Holder;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.chunk.ChunkAccess;
 import net.minecraft.world.level.chunk.ChunkStatus;
@@ -22,7 +23,7 @@ public abstract class MixinProtoChunk extends ChunkAccess
 
     // Not sure what exactly happened here when it crashed, occasionally happens in some world. Just prevent crash to occur.
     @Override
-    public Biome getNoiseBiome(int i, int j, int k)
+    public Holder<Biome> getNoiseBiome(int i, int j, int k)
     {
         if (this.getStatus().isOrAfter(ChunkStatus.BIOMES) || this.belowZeroRetrogen != null && this.belowZeroRetrogen.targetStatus().isOrAfter(ChunkStatus.BIOMES))
         {
